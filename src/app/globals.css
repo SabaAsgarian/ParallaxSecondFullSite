@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: cr;
+  src: url(./fonts/CormorantGaramond-Regular.ttf);
+}
+
+@font-face {
+  font-family: le;
+  src: url(./fonts/Latin\ CG\ Elongated.otf);
+}
+@font-face {
+  font-family: gm;
+  src: url(./fonts/EBGaramond-Regular.ttf);
+}
+.updown{
+  
+ 
+    animation: updown 4s ease-in-out infinite;
+
+}
+@keyframes updown {
+  0%, 100% {
+    transform: translateY(10%);
+}
+50% {
+    transform: translateY(0);
+}
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+overflow-x: hidden;
+  background-color: #faf7f3;
+  color: black !important;;
+}
+
+.sticky-parent {
+  height: 300vh;
+
+}
+
+.sticky {
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  height: 150vh;
+}
+
+.sticky h2 {
+  padding: 0 5vw;
+  color: white;
+  transform: translateY(100px);
+  position: relative;
+}
+
+
+
+.scroll {
+  position: absolute;
+  top: 0;
+  height: 100%;
+
+  will-change: transform;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5vw;
+  transition: transform 0.5s ease-in-out;
+}
+
+.scroll.move-left {
+  transform: translateX(-20vw);
+}
+
+.scroll div {
+  border: 2px solid black;
+  padding: 42px;
+ 
+  border-radius: 20px;
+  height: 500px;
+  background-color: #f5ede7;
+  width: 400px;
+  margin: 10px;
+}
+
+.scroll div figure:first-of-type {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scroll div figure:first-of-type img {
+  width: 50px;
+  height: 50px;
+}
+
+.scroll div figure:first-of-type figcaption {
+  font-size: 20px;
+}
+
+.scroll div figure:last-of-type {
+  width: 100%;
+}
+
+.scroll div figure:last-of-type img {
+  width: 250px;
+  height: 400px;
+  margin: 6rem auto;
+  object-fit: contain;
+  transform: translateX(30px);
+}
+
+.endSec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 300px;
+}
+
+
+
+
+
+.gradientOne {
+  background-color: #faf7f3;
+}
+
+.gradientTwo {
+ background-color: #faf7f3;
+}
+.scroll {
+  position: absolute;
+  top: 0;
+  height: 100%;
+
+  will-change: transform;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 ;
+  transition: transform .11s ease-in-out;
+}
+
+.sticky-parent {
+  height: 270vh;
+ 
+}
+
+.sticky {
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.sticky h2 {
+  padding: 0 5vw;
+  color: black;
+  transform: translateY(50px);
+  position: relative;
+}
+
+.sticky h2::after {
+  content: '';
+  position: absolute;
+  height: 5px;
+  background-color: #faf7f3;
+  left: 15%;
+  top: 50%;
+  width: 80%;
+}
+
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+}
+}
+.spin{
+  animation: spin 15s linear infinite reverse
+}
+.brit{
+  transition: 1s;
+  &:hover{
+    filter: brightness(20%);
+    opacity: 1;
+   }
+}
