@@ -24,9 +24,11 @@ export default function CardBig({  }) {
       </Box>
       <Box sx={{position:'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', width: { xs: '100%', sm: '100%', md: '50%' } }}>
         <Image src={image} alt='a' style={{ width:'80%',height:'80%', borderRadius: '0px', }} /> 
-        <Image src={butt} alt='a' style={{ width:'30%', height:'50%', borderRadius: '50%',position:'absolute' ,bottom:'10%',left:'10%',border:'1px solid white',cursor:"pointer"}} className='spin'/> 
-        <ArrowRightAltIcon sx={{color:'white',position:'absolute' ,bottom:'27%',left:'22%',fontSize:'70px'}}/>
-      </Box>
+        <Box sx={{ position: 'absolute', bottom: '12%',left:'12%', cursor: "pointer", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Image src={butt} alt='a' style={{borderRadius: '50%',border: '3px solid white' }} className='spin' />
+          <ArrowRightAltIcon sx={{ color: 'white', fontSize: '70px',position:'absolute' }} />
+        </Box>
+        </Box>
     </Card>
   );
 }

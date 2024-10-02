@@ -39,7 +39,7 @@ const cardData = [
 
 ];
 const JarData = [
-  { image: a, title: 'Jam' },
+  { image: a, title: 'Jams' },
   { image: b, title: 'Honey' },
   { image: c , title: 'Syrup' },
   { image: e, title: 'Sauces & Fruitdessert' },
@@ -80,11 +80,11 @@ export default function page() {
       <div className='bg-header w-full h-[120vh] bg-cover bg-center overflow-x-hidden'>
         <Header />
         <Box sx={{ width: '100%', height: '70%', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
-          <h3 className='font-le text-[15px] lg:text-[40px] text-white font-extrabold w-full text-center'>The unmistakable taste of the very best fruit.</h3>
+          <h3 className='font-le text-[30px] lg:text-[40px] text-white font-extrabold w-full text-center'>The unmistakable taste of the very best fruit.</h3>
           <h1 className='font-cr text-[20px] lg:text-[100px] text-white font-extrabold w-full whitespace-break-spaces text-center'>MAXIMUM ENJOYMENT: IT’S IN OUR NATURE.</h1>
         </Box>
       </div>
-      <div className='bg-cloud h-[45vh] translate-y-[-70%] hidden lg:flex justify-center'>
+      <div className='bg-cloud h-[45vh] translate-y-[-50%] flex justify-center bg-repeat-x'>
       {JarData.map((card, index) => (
           <Jar key={index} image={card.image} title={card.title} />
         ))}
@@ -93,7 +93,7 @@ export default function page() {
         <Grid item xs={12} sm={6} md={4} lg={12} sx={{ textAlign: 'center' }}>
           <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', position: 'relative' }}>
 
-            <Image src={six} alt='a' className='spin border-5 border-black rounded-full ' />
+            <Image src={six} alt='a' className='spin border-5 border-black border-double rounded-full ' />
             <Image src={d} alt='a' className=' border-5 border-black w-[100px] h-[80px] absolute top-[25%]' />
           </Box>
           <div data-aos="fade-up"
@@ -105,7 +105,7 @@ export default function page() {
         </Grid>
       </Grid>
       <div data-aos="fade-up"
-        data-aos-duration="3000" data-aos-offset="300" className='w-full flex my-[10%]'>
+        data-aos-duration="3000" data-aos-offset="400" className='w-full flex my-[10%]'>
         <div className='w-full lg:w-[40%] h-auto'> <Cardone /></div>
         <div className='w-full lg:w-[60%] h-auto translate-y-[10%] translate-x-[10%]'><CardTwo /></div>
       </div>
@@ -120,21 +120,21 @@ export default function page() {
 
 
         <figure className='absolute w-full h-[50%] lg:w-[30%] lg:h-[80%] left-[10%] top-[10%]  rounded-full flex flex-wrap justify-center items-center'>
-          <Image src={t} alt='a' className='w-full cursor-pointer' />
+          <Image src={t} alt='a' className='w-[50%] lg:w-full h-fit cursor-pointer' />
 
 
         </figure>
-        <div className='absolute hidden lg:flex lg:w-[20%] lg:h-[42%] right-[20%] top-[20%] border-2 border-white rounded-full'>
-          <Image src={j} alt='a' className='w-full spin cursor-pointer' />
-          <ArrowRightAltIcon sx={{ color: 'white', fontSize: '80px', position: 'absolute', top: '38%', left: '30%' }} />
+        <div className='absolute hidden lg:flex right-[20%] top-[20%] '>
+          <Image src={j} alt='a' className='w-full  spin cursor-pointer border-2 border-white rounded-full' />
+          <ArrowRightAltIcon sx={{ color: 'white', fontSize: '100px', position: 'absolute', top: '45%',left:'45%',transform:'translate(-45%,-45%)' }} />
         </div>
-      </div>
-      <div className='bg-cloud h-[45vh] translate-y-[-60%]'></div>
+      </div> 
+      <div className='bg-repeat-x bg-cloud h-[45vh] translate-y-[-50%]'></div>
       <div className='!bg-[#faf7f3] w-[100%] '>
         <Products scrollPosition={scrollPosition} />
       </div>
     <Box sx={{display:'flex',justifyContent:'center',alignItems:'center',textAlign:'center'}}>
-    <Typography sx={{textAlign:'center',fontFamily:'le',fontSize:{xs:'20px',md:'50px'},fontWeight:'bolder'}}>Follow us on Instagram @darbo_official</Typography>
+    <Typography sx={{textAlign:'center',fontFamily:'le',fontSize:{xs:'30px',md:'50px'},fontWeight:'bolder'}}>Follow us on Instagram @darbo_official</Typography>
       </Box> 
       <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', backgroundColor: '#f6f7fa', height: 'auto',}} >
         

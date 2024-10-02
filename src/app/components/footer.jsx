@@ -133,16 +133,16 @@ export default function footer() {
                                 <Image src={Me} alt="me" width={100} height={100} style={{ borderRadius: '50%', backgroundColor: '#c3a78e' }} />
                                 <Typography sx={{color:"white",fontFamily:'cr'}}>Developed by saba asgarian</Typography>
                                 <Link href='https://www.instagram.com/saba_asgarian_web?igsh=M2Z2dTU3cHFmeW1o&utm_source=qr'>
-                                    <InstagramIcon sx={{ color: 'white', ml: '2%' }} /> {/* Set color here */}
+                                    <InstagramIcon sx={{ color: 'white', ml: '2%' }}  className="p-hover"/> {/* Set color here */}
                                 </Link>
                                 <Link href='https://www.linkedin.com/in/saba-asgarian-69161088?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'>
-                                    <LinkedInIcon sx={{ color: 'white', ml: '2%' }} /> {/* Set color here */}
+                                    <LinkedInIcon sx={{ color: 'white', ml: '2%' }} className="p-hover" /> {/* Set color here */}
                                 </Link>
                                 <Link href='https://github.com/SabaAsgarian'>
-                                    <GitHubIcon sx={{ color: 'white', ml: '2%' }} /> {/* Set color here */}
+                                    <GitHubIcon sx={{ color: 'white', ml: '2%' }}  className="p-hover"/> {/* Set color here */}
                                 </Link>
                                 <Link href='mailto:computer.sabaa@gmail.co'>
-                                    <MailIcon sx={{ color: 'white', ml: '2%' }} /> {/* Set color here */}
+                                    <MailIcon sx={{ color: 'white', ml: '2%' }} className="p-hover" /> {/* Set color here */}
                                 </Link>
                             </Item>
                         </Stack>

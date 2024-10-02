@@ -11,8 +11,10 @@ export default function CardBig({  }) {
     <Card sx={{backgroundColor:'#faf7f3', display: 'flex', boxShadow: 'none', flexDirection: { xs: 'column', sm: 'column', md: 'column' } }} >
     <Box sx={{ marginLeft:'4%',display: 'flex', justifyContent: 'start', alignItems: 'center', width: { xs: '100%', sm: '100%', md: '100%' } ,position:"relative"}}>
       <Image src={image} alt='a' style={{ width:'80%', height:'80%', borderRadius: '0px' }} /> {/* Adjust width/height as needed */}
-      <Image src={butt} alt='a' style={{ width:'30%', height:'40%', borderRadius: '50%',position:'absolute' ,bottom:'1%',border:'1px solid white',cursor:"pointer"}} className='spin'/> 
-      <ArrowRightAltIcon sx={{color:'white',position:'absolute' ,bottom:'15%',left:'10%',fontSize:'70px'}}/>
+      <Box sx={{ position: 'absolute', bottom: '1%', cursor: "pointer", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Image src={butt} alt='a' style={{borderRadius: '50%',border: '1px solid white' }} className='spin' />
+          <ArrowRightAltIcon sx={{ color: 'white', fontSize: '70px',position:'absolute' }} />
+        </Box>
     </Box>
     <Box sx={{ width: { xs: '100%', sm: '100%', md: '100%' }, display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '16px' }}>
       <CardContent>

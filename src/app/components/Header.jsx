@@ -33,7 +33,7 @@ import { styled as muiStyled } from '@mui/material/styles';
 import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
 
-
+import M from './m'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItem from '@mui/material/ListItem';
@@ -121,6 +121,7 @@ export default function header() {
     const handleScroll = () => {
         if (window.scrollY > 100) {
             setIsFixed(true);
+            
         } else {
             setIsFixed(false);
         }
@@ -231,7 +232,7 @@ export default function header() {
                     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%',padding:'2%' }}>
                         <Box sx={{ display: 'flex', alignItems: 'center',fontFamily:'cr' }}>
                             <Typography sx={{fontFamily:'cr'}}>
-                                En<KeyboardArrowDownIcon/>
+                                <M />
                             </Typography>
                             <IconButton sx={{ color: 'white' }}>
                                 <SearchOutlinedIcon />
@@ -240,21 +241,39 @@ export default function header() {
                         </Box>
                         <Hidden lgDown>
                            
+                                <Link href="#shop" className='colorlink'>
+                                    <Typography sx={{fontFamily:'cr',
+                                    transitionDuration: '.3s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
+                                        color: '#c3a88f'
+                                    }
+                                }} >Products <hr/></Typography>
+                                     </Link>
                                 <Link href="#shop" style={{fontFamily:'cr',
                                     transitionDuration: '1s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
                                         color: '#30efc1'
                                     }
-                                }} className='colorlink'>Products <hr/></Link>
-                                <Link href="#shop" style={{fontFamily:'cr',
-                                    transitionDuration: '1s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
-                                        color: '#30efc1'
+                                }} className='colorlink'>
+                                      <Typography sx={{fontFamily:'cr',
+                                    transitionDuration: '.3s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
+                                        color: '#c3a88f'
                                     }
-                                }} className='colorlink'>Recipes</Link>
+                                }} >
+                                    Recipes
+                                    </Typography>
+                                    </Link>
                                 <Link href="#eat" style={{fontFamily:'cr',
                                     transitionDuration: '1s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
                                         color: '#30efc1'
                                     }
-                                }} className='colorlink'>Tasty News</Link>
+                                }} className='colorlink'>
+                                      <Typography sx={{fontFamily:'cr',
+                                    transitionDuration: '.3s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
+                                        color: '#c3a88f'
+                                    }
+                                }} >
+                                    Tasty News
+                                    </Typography>
+                                    </Link>
                            
                         </Hidden>
                         
@@ -268,12 +287,28 @@ export default function header() {
                                     transitionDuration: '1s', color: 'white', textDecoration: 'none', '&:hover': {
                                         color: '#30efc1'
                                     }
-                                }} className='colorlink'>About us</Link>
+                                }} className='colorlink'>
+                                      <Typography sx={{fontFamily:'cr',
+                                    transitionDuration: '.3s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
+                                        color: '#c3a88f'
+                                    }
+                                }} >
+                                    About us
+                                    </Typography>
+                                    </Link>
                                 <Link href="#tt" style={{ fontFamily:'cr',
                                     transitionDuration: '1s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
                                         color: '#30efc1'
                                     }
-                                }} className='colorlink'>Darbo</Link>
+                                }} className='colorlink'>
+                                      <Typography sx={{fontFamily:'cr',
+                                    transitionDuration: '.3s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
+                                        color: '#c3a88f'
+                                    }
+                                }} >
+                                    Darbo
+                                    </Typography>
+                                    </Link>
                          
                         </Hidden>
                     </Box>
@@ -320,7 +355,7 @@ export default function header() {
                                 <ListItemButton component="a" href="/">
                                     <ListItemText primary="Products" sx={{borderBottom:'1px solid white',
                                         transitionDuration: '1s', '&:hover': {
-                                            color: '#30efc1'
+                                            color: '#c3a88f'
                                         }
                                     }} />
                                 </ListItemButton>
@@ -329,7 +364,7 @@ export default function header() {
                                 <ListItemButton component="a" href="/">
                                     <ListItemText primary="Recipes" sx={{borderBottom:'1px solid white',
                                         transitionDuration: '1s', '&:hover': {
-                                            color: '#30efc1'
+                                            color: '#c3a88f'
                                         }
                                     }} />
                                 </ListItemButton>
@@ -338,7 +373,7 @@ export default function header() {
                                 <ListItemButton component="a" href="/">
                                     <ListItemText primary="Tasty News" sx={{borderBottom:'1px solid white',
                                         transitionDuration: '1s', '&:hover': {
-                                            color: '#30efc1'
+                                            color: '#c3a88f'
                                         }
                                     }} />
                                 </ListItemButton>
@@ -347,7 +382,7 @@ export default function header() {
                                 <ListItemButton component="a" href="/">
                                     <ListItemText primary="About us" sx={{borderBottom:'1px solid white',
                                         transitionDuration: '1s', '&:hover': {
-                                            color: '#30efc1'
+                                            color: '#c3a88f'
                                         }
                                     }} />
                                 </ListItemButton>
@@ -356,7 +391,7 @@ export default function header() {
                                 <ListItemButton component="a" href="/">
                                     <ListItemText primary="Darbo" sx={{borderBottom:'1px solid white',
                                         transitionDuration: '1s', '&:hover': {
-                                            color: '#30efc1'
+                                            color: '#c3a88f'
                                         }
                                     }} />
                                 </ListItemButton>

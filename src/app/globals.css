@@ -57,7 +57,7 @@ overflow-x: hidden;
 
 .sticky h2 {
   padding: 0 5vw;
-  color: white;
+
   transform: translateY(100px);
   position: relative;
 }
@@ -67,7 +67,7 @@ overflow-x: hidden;
 .scroll {
   position: absolute;
   top: 0;
-  height: 100%;
+  
 
   will-change: transform;
   display: flex;
@@ -196,4 +196,16 @@ overflow-x: hidden;
     filter: brightness(20%);
     opacity: 1;
    }
+}
+.p-hover{
+  transition: .3s;
+  &:hover{
+    color:#c3a78e;
+  }
+}
+.img-hover{
+  transition: 1s;
+  &:hover{
+    transform: translateY(-10%);
+  }
 }
