@@ -11,7 +11,7 @@ export default function CardBig({  }) {
     <Card sx={{backgroundColor:'#faf7f3', display: 'flex', boxShadow: 'none', flexDirection: { xs: 'column', sm: 'column', md: 'column' } }} >
     <Box sx={{ marginLeft:'4%',display: 'flex', justifyContent: 'start', alignItems: 'center', width: { xs: '100%', sm: '100%', md: '100%' } ,position:"relative"}}>
       <Image src={image} alt='a' style={{ width:'80%', height:'80%', borderRadius: '0px' }} /> {/* Adjust width/height as needed */}
-      <Box sx={{ position: 'absolute', bottom: '1%', cursor: "pointer", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <Box sx={{ position: 'absolute', bottom: '10%',left:'10%', cursor: "pointer", display: 'flex', justifyContent: 'center', alignItems: 'center',width:{xs:'50%',md:'auto'} ,height:{xs:'50%',md:'auto'}}}>
           <Image src={butt} alt='a' style={{borderRadius: '50%',border: '1px solid white' }} className='spin' />
           <ArrowRightAltIcon sx={{ color: 'white', fontSize: '70px',position:'absolute' }} />
         </Box>

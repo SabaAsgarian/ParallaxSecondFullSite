@@ -75,6 +75,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 const StyledDrawer = styled(Drawer)(({ theme }) => ({
     '& .MuiDrawer-paper': {
         width: drawerWidth,
+        height:'120vh',
         backgroundColor: 'transparent', // Set background color to white
         color: 'white', // Set text color to black
        
@@ -246,7 +247,7 @@ export default function header() {
                                     transitionDuration: '.3s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
                                         color: '#c3a88f'
                                     }
-                                }} >Products <hr/></Typography>
+                                }} >Products <hr className='hover:bg-[#c3a88f] hover:text-[#c3a88f]'/></Typography>
                                      </Link>
                                 <Link href="#shop" style={{fontFamily:'cr',
                                     transitionDuration: '1s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
