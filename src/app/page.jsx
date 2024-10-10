@@ -131,7 +131,7 @@ export default function page() {
       </div> 
       <div className='bg-repeat-x bg-cloud h-[45vh] translate-y-[-50%]'></div>
       <div className='!bg-[#faf7f3] w-[100%] '>
-         <Typography variant="h2" sx={{marginLeft: '5%', color: 'black', paddingBottom:'5%',fontFamily: 'le' }}>
+         <Typography variant="h2" sx={{marginLeft: '5%', color: 'black',fontFamily: 'le' }}>
             Our Products
           </Typography>
         <Products scrollPosition={scrollPosition} />
