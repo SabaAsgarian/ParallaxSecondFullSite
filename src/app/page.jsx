@@ -98,7 +98,7 @@ export default function page() {
           </Box>
           <div data-aos="fade-up"
             data-aos-duration="3000" className='flex justify-center items-center text-center'>
-            <Typography variant="h6" sx={{display:'flex',justifyContent:'center',textAlign:'center', fontWeight: 'bolder', color: 'black', width: '80%', fontFamily: 'cr', fontSize: '30px' }}>
+            <Typography variant="h6" sx={{display:'flex',justifyContent:'center',textAlign:'center', fontWeight: 'bolder', color: 'black', width: '90%', fontFamily: 'cr', fontSize: '30px' }}>
               The Darbo Family has been bringing love and dedication to the creation of delicious little delicacies since 1879. Whatever you’re looking for, you’ll find it here as if by magic. And one thing is certain: the results will delight both your eyes and your palate.
             </Typography>
           </div>
