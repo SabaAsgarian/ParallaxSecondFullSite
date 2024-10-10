@@ -90,7 +90,7 @@ export default function header() {
     const [open, setOpen] = React.useState(false);
     const [isFixed, setIsFixed] = React.useState(false);
     // const [displayText, setDisplayText] = React.useState('Shine With Rose'); // State for text display
-    const isSmallScreen = useMediaQuery(theme.breakpoints.down('md')); // Check if screen is small or medium
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('lg')); // Check if screen is small or medium
 
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
