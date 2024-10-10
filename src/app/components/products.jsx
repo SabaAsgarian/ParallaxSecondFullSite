@@ -52,7 +52,7 @@ const Products = () => {
   }, []);
 
   return (
-    <Container maxWidth="xl" sx={{ py: 4, backgroundColor: '#faf7f3 !important' }}>
+    <Container maxWidth="xl" sx={{ py: 4, backgroundColor: '#faf7f3 !important',height:'auto' }}>
       <CssBaseline />
    
       <div className="sticky-parent">
