@@ -84,7 +84,7 @@ export default function page() {
           <h1 className='font-cr text-[20px] lg:text-[100px] text-white font-extrabold w-full whitespace-break-spaces text-center'>MAXIMUM ENJOYMENT: IT’S IN OUR NATURE.</h1>
         </Box>
       </div>
-      <div className='bg-cloud h-[45vh]  sm:translate-y-[-50%] md:translate-y-[-30%] lg:translate-y-[-50%] flex justify-center bg-repeat-x'>
+      <div className='bg-cloud h-[45vh]  sm:translate-y-[-70%] md:translate-y-[-40%] lg:translate-y-[-50%] flex justify-center bg-repeat-x'>
       {JarData.map((card, index) => (
           <Jar key={index} image={card.image} title={card.title} />
         ))}
