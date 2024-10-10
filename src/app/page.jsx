@@ -130,7 +130,7 @@ export default function page() {
         </div>
       </div> 
       <div className='bg-repeat-x bg-cloud h-[45vh] translate-y-[-50%]'></div>
-      <div className='!bg-[#faf7f3] w-[100%] '>
+      <div className='!bg-[#faf7f3] w-[100%] h-auto'>
          <Typography variant="h2" sx={{marginLeft: '5%', color: 'black',fontFamily: 'le' }}>
             Our Products
           </Typography>
