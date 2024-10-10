@@ -77,7 +77,7 @@ export default function page() {
   }
   return (
     <div className='bg-[#faf7f3]'>
-      <div className='bg-header w-full h-[120vh] bg-cover bg-center overflow-x-hidden'>
+      <div className='bg-header w-[100%] h-[120vh] bg-cover bg-center '>
         <Header />
         <Box sx={{ width: '100%', height: '70%', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
           <h3 className='font-le text-[30px] lg:text-[40px] text-white font-extrabold w-full text-center'>The unmistakable taste of the very best fruit.</h3>
