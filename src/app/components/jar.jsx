@@ -5,7 +5,7 @@ import { Description } from '@mui/icons-material';
 import '../globals.css'
 const Jar = ({ image, title }) => {
     return (
-        <Card sx={{backgroundColor:'transparent' ,width: { xs: '100%', sm: '100%', md: '20%' }, margin: '5px',border:'0px' ,boxShadow:'none'}} className="my-10 page2 updown">
+        <Card sx={{backgroundColor:'transparent' ,width: { xs: '100%', sm: '100%', md: '20%' }, margin: '5px',border:'0px' ,boxShadow:'none',height:'auto'}} className=" page2 updown">
             <CardContent>
                 <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: 'auto' }}>
                     <Image src={image} alt={title} width={150} height={150} style={{transitionDuration: '1s', objectFit: 'cover',cursor:'pointer' }} className='img-hover'/>
