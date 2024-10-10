@@ -131,6 +131,9 @@ export default function page() {
       </div> 
       <div className='bg-repeat-x bg-cloud h-[45vh] translate-y-[-50%]'></div>
       <div className='!bg-[#faf7f3] w-[100%] '>
+         <Typography variant="h2" sx={{ fontSize: 48, color: 'black', paddingBottom:'5%',fontFamily:'le' }}>
+            Our Products
+          </Typography>
         <Products scrollPosition={scrollPosition} />
       </div>
     <Box sx={{display:'flex',justifyContent:'center',alignItems:'center',textAlign:'center'}}>
