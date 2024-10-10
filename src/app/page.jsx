@@ -89,7 +89,7 @@ export default function page() {
           <Jar key={index} image={card.image} title={card.title} />
         ))}
       </div>
-      <Grid container spacing={2} sx={{ justifyContent: 'center', alignItems: 'center',marginTop:'2%' }}>
+     <Grid container spacing={2} sx={{ justifyContent: 'center', alignItems: 'center',display:'flex',textAlign:'center' }}>
         <Grid item xs={12} sm={6} md={4} lg={12} sx={{ textAlign: 'center' }}>
           <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', position: 'relative' }}>
 
@@ -97,8 +97,8 @@ export default function page() {
             <Image src={d} alt='a' className=' border-5 border-black w-[100px] h-[80px] absolute top-[25%]' />
           </Box>
           <div data-aos="fade-up"
-            data-aos-duration="3000">
-            <Typography variant="h6" sx={{ fontWeight: 'bolder', color: 'black', width: '100%', fontFamily: 'cr', fontSize: '30px' }}>
+            data-aos-duration="3000" className='flex justify-center items-center text-center'>
+            <Typography variant="h6" sx={{display:'flex',justifyContent:'center',textAlign:'center', fontWeight: 'bolder', color: 'black', width: '80%', fontFamily: 'cr', fontSize: '30px' }}>
               The Darbo Family has been bringing love and dedication to the creation of delicious little delicacies since 1879. Whatever you’re looking for, you’ll find it here as if by magic. And one thing is certain: the results will delight both your eyes and your palate.
             </Typography>
           </div>
