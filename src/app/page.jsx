@@ -76,7 +76,7 @@ export default function page() {
     )// Your custom loading indicator
   }
   return (
-    <div className='bg-[#faf7f3]'>
+    <div className='bg-[#faf7f3] overflow-x-hidden'>
       <div className='bg-header w-[100%] h-[120vh] bg-cover bg-center '>
         <Header />
         <Box sx={{ width: '100%', height: '70%', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
