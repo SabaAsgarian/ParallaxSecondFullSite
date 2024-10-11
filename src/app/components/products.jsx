@@ -58,7 +58,7 @@ const Products = () => {
       <div className="sticky-parent">
         <div className="sticky">
         
-          <div className="scroll w-[500vw] sm:w-[400vw] md:w-[300vw] lg:w-[180vw]" sx={{ transform: `translateX(-${transformValue}px)` }} style={{ transform: `translateX(-${transformValue}px)`, color: 'black !important' }}>
+          <div className="scroll w-[500vw] sm:w-[400vw] md:w-[300vw] lg:w-[170vw]" sx={{ transform: `translateX(-${transformValue}px)` }} style={{ transform: `translateX(-${transformValue}px)`, color: 'black !important' }}>
             {arr.map((item, index) => (
               <Grid key={index} item xs={3} sm={12} md={12} lg={12} sx={{display:'flex',cursor:'pointer'}} className='hover:bg-[#c3a78e]' >
                 <figure className='flex '>
