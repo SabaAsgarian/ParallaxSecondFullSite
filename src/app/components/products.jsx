@@ -29,15 +29,18 @@ const arr = [
 
 const Products = () => {
   const [scrollPosition, setScrollPosition] = React.useState(0);
+  const [transformValue, setTransformValue] = React.useState(0);
 
   const handleScroll = () => {
     const currentPosition = window.scrollY;
     if (currentPosition > scrollPosition) {
       // Scrolling down
       setScrollPosition(currentPosition);
+      setTransformValue(currentPosition / 8);
     } else {
       // Scrolling up
       setScrollPosition(currentPosition);
+      setTransformValue(currentPosition / 8);
     }
   };
 
@@ -49,28 +52,27 @@ const Products = () => {
   }, []);
 
   return (
-    <Container maxWidth="xl" sx={{ py: 4, backgroundColor: '#faf7f3 !important' ,}}>
+    <Container maxWidth="2xl" sx={{ py: 4, backgroundColor: '#faf7f3 !important',height:'auto' }}>
       <CssBaseline />
    
       <div className="sticky-parent">
         <div className="sticky">
-         
-          <div className="scroll" sx={{ transform: (theme) => `translateX(-${scrollPosition / 8}px)` }} style={{ transform: `translateX(-${scrollPosition / 8}px)`, color: 'black !important' }}>
+          <Typography variant="h2" sx={{ fontSize: 48, color: 'black', paddingBottom:'5%',fontFamily:'le' }}>
+            Our Products
+          </Typography>
+          <div className="scroll w-[500vw] sm:w-[400vw] md:w-[300vw] lg:w-[180vw]" sx={{ transform: `translateX(-${transformValue}px)` }} style={{ transform: `translateX(-${transformValue}px)`, color: 'black !important' }}>
             {arr.map((item, index) => (
-              <Grid key={index} item xs={3} sm={12} md={12} lg={12} sx={{display:'flex',cursor:'pointer'}}>
+              <Grid key={index} item xs={3} sm={12} md={12} lg={12} sx={{display:'flex',cursor:'pointer'}} className='hover:bg-[#c3a78e]' >
                 <figure className='flex '>
-                  <Image src={item.src} alt={item.title} className='w-full' />
-                  <figcaption className='text-black font-le w-full'>{item.title}</figcaption>
+                  <Image src={item.src} alt={item.title} className='w-full ' />
+                  <figcaption className='text-black font-cr w-full font-extrabold'>{item.title}</figcaption>
                 </figure>
               </Grid>
             ))}
           </div>
         </div>
       </div>
-
-
     </Container>
   );
 };
-
 export default Products;
