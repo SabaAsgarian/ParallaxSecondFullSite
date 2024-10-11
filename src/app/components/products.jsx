@@ -52,14 +52,12 @@ const Products = () => {
   }, []);
 
   return (
-    <Container maxWidth="2xl" sx={{ py: 4, backgroundColor: '#faf7f3 !important',height:'auto' }}>
+    <Container maxWidth="xl" sx={{ py: 4, backgroundColor: '#faf7f3 !important' }}>
       <CssBaseline />
    
       <div className="sticky-parent">
         <div className="sticky">
-          <Typography variant="h2" sx={{ fontSize: 48, color: 'black', paddingBottom:'5%',fontFamily:'le' }}>
-            Our Products
-          </Typography>
+         
           <div className="scroll w-[500vw] sm:w-[400vw] md:w-[300vw] lg:w-[180vw]" sx={{ transform: `translateX(-${transformValue}px)` }} style={{ transform: `translateX(-${transformValue}px)`, color: 'black !important' }}>
             {arr.map((item, index) => (
               <Grid key={index} item xs={3} sm={12} md={12} lg={12} sx={{display:'flex',cursor:'pointer'}} className='hover:bg-[#c3a78e]' >
