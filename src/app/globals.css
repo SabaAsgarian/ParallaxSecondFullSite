@@ -84,9 +84,9 @@ overflow-x: hidden;
 .scroll div {
   border: 2px solid black;
   padding: 42px;
- 
+ height: 60%;
   border-radius: 20px;
-  height: 60%;
+
   background-color: #f5ede7;
   width: 400px;
   margin: 10px;
@@ -120,13 +120,7 @@ overflow-x: hidden;
   transform: translateX(30px);
 }
 
-.endSec {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 300px;
-}
+
 
 
 
@@ -153,7 +147,7 @@ overflow-x: hidden;
 }
 
 .sticky-parent {
-  height: 270vh;
+  height: fit-content;
  
 }
 
