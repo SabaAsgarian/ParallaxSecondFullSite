@@ -157,7 +157,7 @@ export default function page() {
 
       </Box> 
  <Box sx={{display:'flex',justifyContent:'start',alignItems:'center',textAlign:'start',marginLeft:'3%',marginBottom:'5%'}}>
-    <Typography variant='h1' sx={{textAlign:'start',fontFamily:'le',}}>Discover our product range</Typography>
+    <Typography variant='h2' sx={{textAlign:'start',fontFamily:'le',}}>Discover our product range</Typography>
 
       </Box> 
       <Box data-aos="fade-up"
@@ -172,7 +172,7 @@ export default function page() {
 
       </Box> 
  <Box sx={{width:{xs:'80%',lg:'50%'},display:'flex',justifyContent:'start',alignItems:'center',textAlign:'start',marginLeft:'3%',marginTop:'3%'}}>
-    <Typography variant='h1' sx={{textAlign:'start',fontFamily:'le'}}>Our most delectable recipe ideas</Typography>
+    <Typography variant='h2' sx={{textAlign:'start',fontFamily:'le'}}>Our most delectable recipe ideas</Typography>
 
       </Box> 
  <Box sx={{width:'60%',display:'flex',justifyContent:'start',alignItems:'center',textAlign:'start',marginLeft:'3%',marginBottom:'5%',marginTop:'3%'}}>
