@@ -43,25 +43,21 @@ import MuiAppBar from '@mui/material/AppBar';
 import './../globals.css'
 const drawerWidth = '100%';
 
-const AppBar = styled(MuiAppBar)(({ theme, isFixed }) => ({
+const AppBar = styled(MuiAppBar, {
+    shouldForwardProp: (prop) => prop !== 'isFixed' // This prevents isFixed from being passed to the DOM
+})(({ theme, isFixed }) => ({
+    width:'100%',
     zIndex: 9999,
-    position: 'static', // Change to static
-    backgroundColor: '#0000008a', // Set background color to white
+    backgroundColor: '#0000008a',
     color: 'white',
     borderBottom: '1px solid black',
-  
     boxShadow: isFixed ? '0 0 50px 0 rgba(0, 0, 0, 0.1)' : 'none',
-  
     position: isFixed ? 'fixed' : 'relative',
     top: 0,
     left: 0,
     right: 0,
     justifyContent: 'space-between',
-    // '&:hover': {
-    //   backgroundColor: 'white'
-    //   ,color:'black'
-    // }
-  }));
+}));
 
 const DrawerHeader = styled('div')(({ theme }) => ({
     display: 'flex',
@@ -75,10 +71,11 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 const StyledDrawer = styled(Drawer)(({ theme }) => ({
     '& .MuiDrawer-paper': {
         width: drawerWidth,
-        height:'120vh',
+        height:'auto',
+        minHeight:'120vh',
         backgroundColor: 'transparent', // Set background color to white
         color: 'white', // Set text color to black
-       
+       overflow:'scroll'
     },
     zIndex: '99999',
 }));
@@ -230,52 +227,59 @@ export default function header() {
             <AppBar isFixed={isFixed}>
                 <Toolbar>
 
-                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%',padding:'2%' }}>
-                        <Box sx={{ display: 'flex', alignItems: 'center',fontFamily:'cr' }}>
-                            <Typography sx={{fontFamily:'cr'}}>
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', }}>
+                        <Box sx={{ display: 'flex', alignItems: 'center', fontFamily: 'cr' }}>
+                            <Typography component="div" sx={{ fontFamily: 'cr' }}>
                                 <M />
                             </Typography>
                             <IconButton sx={{ color: 'white' }}>
                                 <SearchOutlinedIcon />
                             </IconButton>
-
                         </Box>
                         <Hidden lgDown>
-                           
-                                <Link href="#shop" className='colorlink'>
-                                    <Typography sx={{fontFamily:'cr',
-                                    transitionDuration: '.3s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
-                                        color: '#c3a88f'
-                                    }
-                                }} >Products <hr className='hover:bg-[#c3a88f] hover:text-[#c3a88f]'/></Typography>
-                                     </Link>
-                                <Link href="#shop" style={{fontFamily:'cr',
-                                    transitionDuration: '1s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
-                                        color: '#30efc1'
-                                    }
-                                }} className='colorlink'>
-                                      <Typography sx={{fontFamily:'cr',
-                                    transitionDuration: '.3s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
-                                        color: '#c3a88f'
-                                    }
-                                }} >
-                                    Recipes
+                            <Link href="#shop" className='colorlink'>
+                                <Box>
+                                    <Typography component="div" sx={{
+                                        fontFamily: 'cr',
+                                        transitionDuration: '.3s', 
+                                        color: 'white', 
+                                        margin: '0 15px', 
+                                        textDecoration: 'none', 
+                                        '&:hover': {
+                                            color: '#c3a88f'
+                                        }
+                                    }}>
+                                        Products
                                     </Typography>
-                                    </Link>
-                                <Link href="#eat" style={{fontFamily:'cr',
-                                    transitionDuration: '1s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
-                                        color: '#30efc1'
-                                    }
-                                }} className='colorlink'>
-                                      <Typography sx={{fontFamily:'cr',
-                                    transitionDuration: '.3s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
-                                        color: '#c3a88f'
-                                    }
-                                }} >
-                                    Tasty News
-                                    </Typography>
-                                    </Link>
-                           
+                                    <hr className='hover:bg-[#c3a88f] hover:text-[#c3a88f]'/>
+                                </Box>
+                            </Link>
+                            <Link href="#shop" style={{fontFamily:'cr',
+                                transitionDuration: '1s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
+                                    color: '#30efc1'
+                                }
+                            }} className='colorlink'>
+                                  <Typography sx={{fontFamily:'cr',
+                                transitionDuration: '.3s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
+                                    color: '#c3a88f'
+                                }
+                            }} >
+                                Recipes
+                                </Typography>
+                                </Link>
+                            <Link href="#eat" style={{fontFamily:'cr',
+                                transitionDuration: '1s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
+                                    color: '#30efc1'
+                                }
+                            }} className='colorlink'>
+                                  <Typography sx={{fontFamily:'cr',
+                                transitionDuration: '.3s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
+                                    color: '#c3a88f'
+                                }
+                            }} >
+                                Tasty News
+                                </Typography>
+                                </Link>
                         </Hidden>
                         
                             <Link href="/" passHref>
@@ -343,7 +347,7 @@ export default function header() {
                         variant="temporary"
                         anchor="right"
                         open={open}
-                        className='bg-back bg-center bg-cover'
+                        className='bg-back bg-center bg-cover overflow-y-scroll h-[100%] '
                     >
                         <DrawerHeader>
                             <IconButton onClick={handleDrawerClose} sx={{ color: 'white' }}>

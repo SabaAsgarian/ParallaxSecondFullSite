@@ -33,7 +33,7 @@ export default function footer() {
     return (
         <>
             <Box sx={{ width: '100%', height: 'auto', display: 'flex', justifyContent: 'start', alignItems: 'start', backgroundColor: '#23221f', marginTop: '10%', color: 'white' }}>
-                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'start', width: '100%', marginLeft: '5%', marginTop: '5%' }}> {/* Changed to column */}
+                <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'start', width: '100%', marginLeft: '5%', marginTop: '5%' }}> {/* Changed to column */}
 
                     <Link href="/" style={{ textDecoration: 'none' }}>
                         <Image
@@ -52,6 +52,7 @@ export default function footer() {
                     <Stack
                         direction={{ xs: 'column', sm: 'row' }}
                         spacing={{ xs: 3, sm: 2, md: 4, lg: 10 }}
+                        
                     >
                         <Item><a href="#link1" style={{ color: 'white', textDecoration: 'none', textAlign: 'start' }}>
                             <h1 className="text-[20px] lg:text-[30px] font-cr">Contact</h1>
@@ -63,7 +64,7 @@ export default function footer() {
                                 <p className="p-hover font-gm text-[18px]">T: +43 (0)5242 6951-0
                                 M: info(at)darbo.at</p>
                            <Button sx={{color:'white',border:'1px solid white',width:'120px',borderRadius:'0px','&:hover': {
-                                        color: 'white',backgroundColor:'#c3a78e'
+                                        color: 'white',backgroundColor:'#c3a78e',border:'0px'
                                     }}}>
                             Contact
                            </Button>
@@ -114,7 +115,7 @@ export default function footer() {
                             <h1 className="text-[20px] lg:text-[30px] font-cr">For Bulk Buyers</h1>
 
                             <Button sx={{color:'white',width:'250px',border:'1px solid white',width:'120px',borderRadius:'0px','&:hover': {
-                                        color:'white',backgroundColor:'#c3a78e'
+                                        color:'white',backgroundColor:'#c3a78e',border:'0px'
                                     }}}>
                             For Bulk Buyers
                            </Button>
@@ -127,7 +128,7 @@ export default function footer() {
 
                         </a></Item>
                     </Stack>
-                    <Box sx={{ width: '100%', my: '5%' }}>
+                    <Box sx={{ width: '100%', my: '5%'  }}>
                         <Stack spacing={2}>
                             <Item>
                                 <Image src={Me} alt="me" width={100} height={100} style={{ borderRadius: '50%', backgroundColor: '#c3a78e' }} />
