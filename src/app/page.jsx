@@ -156,8 +156,8 @@ export default function page() {
     <Typography variant='h6' sx={{textAlign:'center',fontFamily:'cr',fontWeight:'bolder',fontStyle:'italic',color:'#C3A78E'}}>Tasty tidbits for every environment</Typography>
 
       </Box> 
- <Box sx={{display:'flex',justifyContent:'start',alignItems:'center',textAlign:'center',marginLeft:'3%',marginBottom:'5%'}}>
-    <Typography variant='h1' sx={{textAlign:'center',fontFamily:'le',}}>Discover our product range</Typography>
+ <Box sx={{display:'flex',justifyContent:'start',alignItems:'center',textAlign:'start',marginLeft:'3%',marginBottom:'5%'}}>
+    <Typography variant='h1' sx={{textAlign:'start',fontFamily:'le',}}>Discover our product range</Typography>
 
       </Box> 
       <Box data-aos="fade-up"
@@ -171,7 +171,7 @@ export default function page() {
     <Typography variant='h6' sx={{textAlign:'start',fontFamily:'cr',fontWeight:'bolder',fontStyle:'italic',color:'#C3A78E'}}>Discover your new favorite dishes now</Typography>
 
       </Box> 
- <Box sx={{width:{xs:'100%',lg:'50%'},display:'flex',justifyContent:'start',alignItems:'center',textAlign:'start',marginLeft:'3%',marginTop:'3%'}}>
+ <Box sx={{width:{xs:'80%',lg:'50%'},display:'flex',justifyContent:'start',alignItems:'center',textAlign:'start',marginLeft:'3%',marginTop:'3%'}}>
     <Typography variant='h1' sx={{textAlign:'start',fontFamily:'le'}}>Our most delectable recipe ideas</Typography>
 
       </Box> 
