@@ -129,7 +129,7 @@ export default function page() {
           </Box>
         </div>
         <div className='absolute bottom-[-25%] left-0 right-0  w-full'>
-          <div className='bg-cloud min-h-[45vh] flex justify-center bg-repeat-x px-4  '>
+          <div className='bg-cloud min-h-[45vh] flex justify-center bg-repeat-x   '>
             {JarData.map((card, index) => (
               <Jar key={index} image={card.image} title={card.title} />
             ))}
@@ -180,13 +180,13 @@ export default function page() {
           <div className='bg-cloud min-h-[45vh] bg-repeat-x bg-center'></div>
         </div>
       </div>
-      <Box sx={{display:'flex',justifyContent:'start',alignItems:'center',textAlign:'center',marginLeft:'3%', marginTop: '15vh'}}>
-        <Typography variant='h6' sx={{textAlign:'center',fontFamily:'cr',fontWeight:'bolder',fontStyle:'italic',color:'#C3A78E'}}>
+      <Box sx={{display:'flex',justifyContent:'start',alignItems:'center',textAlign:'center',marginLeft:'3%', marginTop: '18vh'}}>
+        <Typography variant='h6' sx={{textAlign:'start',fontFamily:'cr',fontWeight:'bolder',fontStyle:'italic',color:'#C3A78E'}}>
           Tasty tidbits for every environment
         </Typography>
       </Box>
-      <Box sx={{display:'flex',justifyContent:'start',alignItems:'center',textAlign:'center',marginLeft:'3%',marginBottom:'5%'}}>
-        <Typography variant='h1' sx={{textAlign:'center',fontFamily:'le',}}>Discover our product range</Typography>
+      <Box sx={{display:'flex',justifyContent:'start',alignItems:'center',textAlign:'start',marginLeft:'3%',marginBottom:'5%'}}>
+        <Typography variant='h1' sx={{textAlign:'start',fontFamily:'le',}}>Discover our product range</Typography>
       </Box>
       <Box data-aos="fade-up"
         data-aos-duration="3000" data-aos-offset="300" sx={{ width:'100%',display: 'flex', flexWrap: 'wrap', justifyContent: 'center', backgroundColor: '#faf7f3',minHeight:'100vh', maxHeight: 'auto',borderBottom:'2px solid #c3a88f'}} >
