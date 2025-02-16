@@ -14,7 +14,7 @@
 
 
 
-- [Demo Project](https://darboparallax.vercel.app/)
+- [Demo Project](https://parallaxsecondfullsite.vercel.app/)
 
 - Developed by Saba Asgarian
 
