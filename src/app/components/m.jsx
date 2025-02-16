@@ -8,11 +8,21 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 export default function BasicMenu({ color }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+  
+  const toggleMenu = (event) => {
+    event.stopPropagation();
+    setAnchorEl(anchorEl ? null : event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const handleMenuItemClick = (lang) => (event) => {
+    event.stopPropagation();
+    handleClose();
+    // Handle language change here
+    console.log(`Changed to ${lang}`);
   };
 
   return (
@@ -22,17 +32,22 @@ export default function BasicMenu({ color }) {
         aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
+        onClick={toggleMenu}
         sx={{
           color: color || 'white',
           fontFamily: 'cr',
           border: `1px solid ${color || 'white'}`,
-          transition: 'all 0.3s ease-in-out'
+          transition: 'all 0.3s ease-in-out',
+          '&:hover': {
+            backgroundColor: 'transparent'
+          }
         }}
       >
-        EN<KeyboardArrowDownIcon/>
+        EN
+        <KeyboardArrowDownIcon sx={{ ml: 1 }} />
       </Button>
       <Menu
+      sx={{zIndex:'1000001'}}
         id="basic-menu"
         anchorEl={anchorEl}
         open={open}
@@ -40,12 +55,29 @@ export default function BasicMenu({ color }) {
         MenuListProps={{
           'aria-labelledby': 'basic-button',
         }}
-        sx={{ zIndex: 9999, color:'black', fontFamily:'cr' }}
+        PopoverClasses={{
+          root: 'language-menu-popover'
+        }}
+        slotProps={{
+          paper: {
+            elevation: 0,
+            sx: {
+              overflow: 'visible',
+              mt: 1.5,
+              '& .MuiAvatar-root': {
+                width: 32,
+                height: 32,
+                ml: -0.5,
+                mr: 1,
+              }
+            },
+          },
+        }}
       >
-        <MenuItem onClick={handleClose}>AT</MenuItem>
-        <MenuItem onClick={handleClose}>EN</MenuItem>
-        <MenuItem onClick={handleClose}>DE</MenuItem>
-        <MenuItem onClick={handleClose}>IT</MenuItem>
+        <MenuItem onClick={handleMenuItemClick('AT')}>AT</MenuItem>
+        <MenuItem onClick={handleMenuItemClick('EN')}>EN</MenuItem>
+        <MenuItem onClick={handleMenuItemClick('DE')}>DE</MenuItem>
+        <MenuItem onClick={handleMenuItemClick('IT')}>IT</MenuItem>
       </Menu>
     </div>
   );
