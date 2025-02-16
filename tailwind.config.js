@@ -16,7 +16,7 @@ module.exports = {
         le:'le',
         gm:'gm'
       }, backgroundImage: {
-        'header': "url('./components/img/a.gif')",
+        'header': "url('./components/img/ab.gif')",
         'cloud': "url('./components/img/wolkenrand-mobile.png')",
         'chery': "url('./components/img/chery.webp')",
         'back': "url('./components/img/mobile-clouds-221x480.png')",

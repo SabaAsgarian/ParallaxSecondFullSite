@@ -21,6 +21,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import logo from './img/darbo_seit1879_4c_n_Since_schwarz.svg'
+import logoo from './img/darbo_seit1879_4c_n_Since_weiss.svg'
 import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
@@ -44,19 +45,20 @@ import './../globals.css'
 const drawerWidth = '100%';
 
 const AppBar = styled(MuiAppBar, {
-    shouldForwardProp: (prop) => prop !== 'isFixed' // This prevents isFixed from being passed to the DOM
+    shouldForwardProp: (prop) => prop !== 'isFixed'
 })(({ theme, isFixed }) => ({
-    width:'100%',
-    zIndex: 9999,
-    backgroundColor: '#0000008a',
-    color: 'white',
-    borderBottom: '1px solid black',
+    width: '100%',
+    zIndex: 99999,
+    backgroundColor: isFixed ? 'white' : '#0000008a',
+    color: isFixed ? 'black' : 'white',
+    borderBottom: `1px solid ${isFixed ? '#c3a88f' : '#c3a88f'}`,
     boxShadow: isFixed ? '0 0 50px 0 rgba(0, 0, 0, 0.1)' : 'none',
     position: isFixed ? 'fixed' : 'relative',
     top: 0,
     left: 0,
     right: 0,
     justifyContent: 'space-between',
+    transition: 'all 0.3s ease-in-out',
 }));
 
 const DrawerHeader = styled('div')(({ theme }) => ({
@@ -117,9 +119,8 @@ export default function header() {
         setOpen(false);
     };
     const handleScroll = () => {
-        if (window.scrollY > 100) {
+        if (window.scrollY > (window.innerHeight * 0.1)) { // 10vh
             setIsFixed(true);
-            
         } else {
             setIsFixed(false);
         }
@@ -230,90 +231,136 @@ export default function header() {
                     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', }}>
                         <Box sx={{ display: 'flex', alignItems: 'center', fontFamily: 'cr' }}>
                             <Typography component="div" sx={{ fontFamily: 'cr' }}>
-                                <M />
+                                <M color={isFixed ? 'black' : 'white'} />
                             </Typography>
-                            <IconButton sx={{ color: 'white' }}>
+                            <IconButton sx={{ color: isFixed ? 'black' : 'white' }}>
                                 <SearchOutlinedIcon />
                             </IconButton>
                         </Box>
                         <Hidden lgDown>
                             <Link href="#shop" className='colorlink'>
                                 <Box>
-                                    <Typography component="div" sx={{
-                                        fontFamily: 'cr',
-                                        transitionDuration: '.3s', 
-                                        color: 'white', 
-                                        margin: '0 15px', 
-                                        textDecoration: 'none', 
-                                        '&:hover': {
-                                            color: '#c3a88f'
-                                        }
-                                    }}>
+                                    <Typography 
+                                        component="div" 
+                                        sx={{
+                                            fontFamily: 'cr',
+                                            transitionDuration: '.3s',
+                                            color: isFixed ? 'black' : 'white',
+                                            margin: '0 15px',
+                                            textDecoration: 'none',
+                                            '&:hover': {
+                                                color: '#c3a88f'
+                                            }
+                                        }}
+                                    >
                                         Products
                                     </Typography>
                                     <hr className='hover:bg-[#c3a88f] hover:text-[#c3a88f]'/>
                                 </Box>
                             </Link>
                             <Link href="#shop" style={{fontFamily:'cr',
-                                transitionDuration: '1s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
+                                transitionDuration: '1s', 
+                                color: isFixed ? 'black' : 'white', 
+                                margin: '0 15px', 
+                                textDecoration: 'none', 
+                                '&:hover': {
                                     color: '#30efc1'
                                 }
                             }} className='colorlink'>
-                                  <Typography sx={{fontFamily:'cr',
-                                transitionDuration: '.3s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
-                                    color: '#c3a88f'
-                                }
-                            }} >
-                                Recipes
+                                <Typography sx={{
+                                    fontFamily:'cr',
+                                    transitionDuration: '.3s', 
+                                    color: isFixed ? 'black' : 'white', 
+                                    margin: '0 15px', 
+                                    textDecoration: 'none', 
+                                    '&:hover': {
+                                        color: '#c3a88f'
+                                    }
+                                }}>
+                                    Recipes
                                 </Typography>
-                                </Link>
-                            <Link href="#eat" style={{fontFamily:'cr',
-                                transitionDuration: '1s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
+                            </Link>
+                            <Link href="#eat" style={{
+                                fontFamily:'cr',
+                                transitionDuration: '1s', 
+                                color: isFixed ? 'black' : 'white', 
+                                margin: '0 15px', 
+                                textDecoration: 'none', 
+                                '&:hover': {
                                     color: '#30efc1'
                                 }
                             }} className='colorlink'>
-                                  <Typography sx={{fontFamily:'cr',
-                                transitionDuration: '.3s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
-                                    color: '#c3a88f'
-                                }
-                            }} >
-                                Tasty News
+                                <Typography sx={{
+                                    fontFamily:'cr',
+                                    transitionDuration: '.3s', 
+                                    color: isFixed ? 'black' : 'white', 
+                                    margin: '0 15px', 
+                                    textDecoration: 'none', 
+                                    '&:hover': {
+                                        color: '#c3a88f'
+                                    }
+                                }}>
+                                    Tasty News
                                 </Typography>
-                                </Link>
+                            </Link>
                         </Hidden>
                         
                             <Link href="/" passHref>
-                                <Image src={logo} alt="logo" height={200} width={200} />
+                                <Image 
+                                    src={isFixed ? logo : logoo} 
+                                    alt="logo" 
+                                    height={200} 
+                                    width={200} 
+                                />
                             </Link>
                      
                         <Hidden lgDown>
                             
-                                <Link href="#about" style={{fontFamily:'cr',
-                                    transitionDuration: '1s', color: 'white', textDecoration: 'none', '&:hover': {
+                                <Link href="#about" style={{
+                                    fontFamily:'cr',
+                                    transitionDuration: '1s', 
+                                    color: isFixed ? 'black' : 'white', 
+                                    textDecoration: 'none', 
+                                    '&:hover': {
                                         color: '#30efc1'
                                     }
                                 }} className='colorlink'>
-                                      <Typography sx={{fontFamily:'cr',
-                                    transitionDuration: '.3s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
-                                        color: '#c3a88f'
-                                    }
-                                }} >
-                                    About us
+                                    <Typography sx={{
+                                        fontFamily:'cr',
+                                        transitionDuration: '.3s', 
+                                        color: isFixed ? 'black' : 'white', 
+                                        margin: '0 15px', 
+                                        textDecoration: 'none', 
+                                        '&:hover': {
+                                            color: '#c3a88f'
+                                        }
+                                    }}>
+                                        About us
                                     </Typography>
-                                    </Link>
-                                <Link href="#tt" style={{ fontFamily:'cr',
-                                    transitionDuration: '1s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
+                                </Link>
+                                <Link href="#tt" style={{
+                                    fontFamily:'cr',
+                                    transitionDuration: '1s', 
+                                    color: isFixed ? 'black' : 'white', 
+                                    margin: '0 15px', 
+                                    textDecoration: 'none', 
+                                    '&:hover': {
                                         color: '#30efc1'
                                     }
                                 }} className='colorlink'>
-                                      <Typography sx={{fontFamily:'cr',
-                                    transitionDuration: '.3s', color: 'white', margin: '0 15px', textDecoration: 'none', '&:hover': {
-                                        color: '#c3a88f'
-                                    }
-                                }} >
-                                    Darbo
+                                    <Typography sx={{
+                                        fontFamily:'cr',
+                                        transitionDuration: '.3s', 
+                                        color: isFixed ? 'black' : 'white', 
+                                        margin: '0 15px', 
+                                        textDecoration: 'none', 
+                                        '&:hover': {
+                                            color: '#c3a88f'
+                                        }
+                                    }}>
+                                        Darbo
                                     </Typography>
-                                    </Link>
+                                </Link>
                          
                         </Hidden>
                     </Box>
@@ -331,12 +378,39 @@ export default function header() {
                     </Box>
                     <Hidden lgDown>
                     <Box sx={{ display: 'flex', alignItems: 'center', transitionDuration: '1s',  }}>
-                        <Button sx={{borderRadius:'0px', backgroundColor: 'transparent', color: 'white', border: '1px solid white', fontFamily: 'gm' ,width:'200px','&:hover': {
-                                        color: 'white',backgroundColor:'#c3a78e',border:'none'
-                                    }}}>For Bulk Buyers</Button>
-                        <Button sx={{borderRadius:'0px', backgroundColor: 'white', color: 'black', fontFamily: 'gm',width:'150px',marginLeft:'5%','&:hover': {
-                                        color: 'white',backgroundColor:'#c3a78e'
-                                    } }}> Contact</Button>
+                        <Button 
+                            sx={{
+                                borderRadius: '0px',
+                                backgroundColor: 'transparent',
+                                color: isFixed ? 'black' : 'white',
+                                border: `1px solid ${isFixed ? 'black' : 'white'}`,
+                                fontFamily: 'gm',
+                                width: '200px',
+                                '&:hover': {
+                                    color: 'white',
+                                    backgroundColor: '#c3a78e',
+                                    border: 'none'
+                                }
+                            }}
+                        >
+                            For Bulk Buyers
+                        </Button>
+                        <Button 
+                            sx={{
+                                borderRadius: '0px',
+                                backgroundColor: isFixed ? 'black' : 'white',
+                                color: isFixed ? 'white' : 'black',
+                                fontFamily: 'gm',
+                                width: '150px',
+                                marginLeft: '5%',
+                                '&:hover': {
+                                    color: 'white',
+                                    backgroundColor: '#c3a78e'
+                                }
+                            }}
+                        >
+                            Contact
+                        </Button>
                     </Box>
                     </Hidden>
                 </Toolbar>
@@ -403,17 +477,44 @@ export default function header() {
                             </ListItem>
                             <ListItem disablePadding>
                                 <ListItemButton component="a" href="/">
-                                <Button sx={{borderRadius:'0px', backgroundColor: 'transparent', color: 'white', border: '1px solid white', fontFamily: 'gm' ,width:'200px','&:hover': {
-                                        color: 'white',backgroundColor:'#c3a78e',border:'none'
-                                    }}}>For Bulk Buyers</Button>
+                                <Button 
+                                    sx={{
+                                        borderRadius: '0px',
+                                        backgroundColor: 'transparent',
+                                        color: 'white',
+                                        border: '1px solid white',
+                                        fontFamily: 'gm',
+                                        width: '200px',
+                                        '&:hover': {
+                                            color: 'white',
+                                            backgroundColor: '#c3a78e',
+                                            border: 'none'
+                                        }
+                                    }}
+                                >
+                                    For Bulk Buyers
+                                </Button>
                         
                                 </ListItemButton>
                             </ListItem>
                             <ListItem disablePadding>
                                 <ListItemButton component="a" href="/">
-                                <Button sx={{borderRadius:'0px', backgroundColor: 'white', color: 'black', fontFamily: 'gm',width:'150px',marginLeft:'5%','&:hover': {
-                                        color: 'white',backgroundColor:'#c3a78e'
-                                    } }}> Contact</Button>
+                                <Button 
+                                    sx={{
+                                        borderRadius: '0px',
+                                        backgroundColor: 'white',
+                                        color: 'black',
+                                        fontFamily: 'gm',
+                                        width: '150px',
+                                        marginLeft: '5%',
+                                        '&:hover': {
+                                            color: 'white',
+                                            backgroundColor: '#c3a78e'
+                                        }
+                                    }}
+                                >
+                                    Contact
+                                </Button>
                         
                                 </ListItemButton>
                             </ListItem>

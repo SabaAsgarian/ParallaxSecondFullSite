@@ -203,3 +203,14 @@ overflow-x: hidden;
     transform: translateY(-10%);
   }
 }
+.n{
+ filter: brightness(50%);
+}
+
+.jar-image {
+    transition: transform 0.3s ease-in-out;
+}
+
+.jar-title {
+    transition: color 0.3s ease-in-out;
+}

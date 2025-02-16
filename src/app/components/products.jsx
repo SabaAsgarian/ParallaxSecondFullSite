@@ -1,31 +1,31 @@
 import React from 'react';
 import { Box, Container, Grid, Typography, Button, CssBaseline } from '@mui/material';
-import one from './img/1.png';
-import two from './img/5.png';
-import three from './img/6.png';
-import four from './img/9.png';
+// import one from './img/1.png';
+// import two from './img/5.png';
+// import three from './img/6.png';
+// import four from './img/9.png';
 
-import Image from 'next/image';
+// import Image from 'next/image';
 
-const arr = [
-  {
-    title: "Honey",
-    src: one,
-  },
-  {
-    title: "Sauces & Fruitdressers",
-    src: two,
-  },
-  {
-    title: "Syrup",
-    src: three,
-  },
-  {
-    title: "Jams",
-    src: four,
-  },
+// const arr = [
+//   {
+//     title: "Honey",
+//     src: one,
+//   },
+//   {
+//     title: "Sauces & Fruitdressers",
+//     src: two,
+//   },
+//   {
+//     title: "Syrup",
+//     src: three,
+//   },
+//   {
+//     title: "Jams",
+//     src: four,
+//   },
 
-];
+// ];
 
 const Products = () => {
   const [scrollPosition, setScrollPosition] = React.useState(0);
