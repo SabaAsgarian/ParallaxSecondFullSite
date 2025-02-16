@@ -186,7 +186,7 @@ export default function page() {
         </Typography>
       </Box>
       <Box sx={{display:'flex',justifyContent:'start',alignItems:'center',textAlign:'start',marginLeft:'3%',marginBottom:'5%'}}>
-        <Typography variant='h1' sx={{textAlign:'start',fontFamily:'le',}}>Discover our product range</Typography>
+        <Typography variant='h2' sx={{textAlign:'start',fontFamily:'le',}}>Discover our product range</Typography>
       </Box>
       <Box data-aos="fade-up"
         data-aos-duration="3000" data-aos-offset="300" sx={{ width:'100%',display: 'flex', flexWrap: 'wrap', justifyContent: 'center', backgroundColor: '#faf7f3',minHeight:'100vh', maxHeight: 'auto',borderBottom:'2px solid #c3a88f'}} >
@@ -198,8 +198,8 @@ export default function page() {
       <Box sx={{width:'80%',display:'flex',justifyContent:'start',alignItems:'center',textAlign:'center',marginLeft:'3%',marginTop:{xs:'10%',lg:'5%'}}}>
         <Typography variant='h6' sx={{textAlign:'start',fontFamily:'cr',fontWeight:'bolder',fontStyle:'italic',color:'#C3A78E'}}>Discover your new favorite dishes now</Typography>
       </Box>
-      <Box sx={{width:{xs:'100%',lg:'50%'},display:'flex',justifyContent:'start',alignItems:'center',textAlign:'start',marginLeft:'3%',marginTop:'3%'}}>
-        <Typography variant='h1' sx={{textAlign:'start',fontFamily:'le'}}>Our most delectable recipe ideas</Typography>
+      <Box sx={{width:{xs:'80%',lg:'50%'},display:'flex',justifyContent:'start',alignItems:'center',textAlign:'start',marginLeft:'3%',marginTop:'3%'}}>
+        <Typography variant='h2' sx={{textAlign:'start',fontFamily:'le'}}>Our most delectable recipe ideas</Typography>
       </Box>
       <Box sx={{width:'60%',display:'flex',justifyContent:'start',alignItems:'center',textAlign:'start',marginLeft:'3%',marginBottom:'5%',marginTop:'3%'}}>
         <Typography variant='h6' sx={{textAlign:'start',fontFamily:'gm',fontWeight:'thiner',}}>Our recipe for the perfect meal? A little inspiration from our culinary tips, the right ingredients, one portion of dedication, and of course the finest Darbo products. Happy cooking!</Typography>
