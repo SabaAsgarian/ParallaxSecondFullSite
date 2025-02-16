@@ -6,9 +6,10 @@ import '../globals.css'
 const Jar = ({ image, title }) => {
     return (
         <Card sx={{
+            zIndex:'9999',
             backgroundColor: 'transparent',
             width: { xs: '100%', sm: '100%', md: '20%' }, 
-            margin: '5px',
+            
             border: '0px',
             boxShadow: 'none',
             position: 'relative',
