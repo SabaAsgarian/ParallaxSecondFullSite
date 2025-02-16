@@ -136,7 +136,7 @@ export default function page() {
           </div>
         </div>
       </div>
-      <Grid container spacing={2} sx={{ justifyContent: 'center', alignItems: 'center',display:'flex',textAlign:'center',width:'100%', minHeight:'100vh',maxHeight:'auto' }}>
+      <Grid container spacing={2} sx={{ justifyContent: 'center', alignItems: 'center',display:'flex',textAlign:'center',width:'100%', minHeight:'100vh',maxHeight:'auto',marginTop:{xs:'5%',lg:'1.5%'} }}>
         <Grid item xs={12} sm={6} md={4} lg={12} sx={{ textAlign: 'center' }}>
           <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', position: 'relative' }}>
 
@@ -180,13 +180,13 @@ export default function page() {
           <div className='bg-cloud min-h-[45vh] bg-repeat-x'></div>
         </div>
       </div>
-      <Box sx={{display:'flex',justifyContent:'start',alignItems:'center',textAlign:'center',marginLeft:'3%', marginTop: '15vh'}}>
-        <Typography variant='h6' sx={{textAlign:'center',fontFamily:'cr',fontWeight:'bolder',fontStyle:'italic',color:'#C3A78E'}}>
+      <Box sx={{display:'flex',justifyContent:'start',alignItems:'center',textAlign:'start',marginLeft:'3%', marginTop: '15vh'}}>
+        <Typography variant='h6' sx={{textAlign:'start',fontFamily:'cr',fontWeight:'bolder',fontStyle:'italic',color:'#C3A78E'}}>
           Tasty tidbits for every environment
         </Typography>
       </Box>
-      <Box sx={{display:'flex',justifyContent:'start',alignItems:'center',textAlign:'center',marginLeft:'3%',marginBottom:'5%'}}>
-        <Typography variant='h1' sx={{textAlign:'center',fontFamily:'le',}}>Discover our product range</Typography>
+      <Box sx={{display:'flex',justifyContent:'start',alignItems:'center',textAlign:'start',marginLeft:'3%',marginBottom:'5%'}}>
+        <Typography variant='h1' sx={{textAlign:'start',fontFamily:'le',}}>Discover our product range</Typography>
       </Box>
       <Box data-aos="fade-up"
         data-aos-duration="3000" data-aos-offset="300" sx={{ width:'100%',display: 'flex', flexWrap: 'wrap', justifyContent: 'center', backgroundColor: '#faf7f3',minHeight:'100vh', maxHeight: 'auto',borderBottom:'2px solid #c3a88f'}} >
