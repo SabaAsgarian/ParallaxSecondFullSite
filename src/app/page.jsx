@@ -128,15 +128,15 @@ export default function page() {
             </Box>
           </Box>
         </div>
-        <div className='absolute bottom-0 left-0 right-0 translate-y-[50%] w-full'>
-          <div className='bg-cloud min-h-[45vh] flex justify-center bg-repeat-x px-4'>
+        <div className='absolute bottom-[-25%] left-0 right-0  w-full'>
+          <div className='bg-cloud min-h-[45vh] flex justify-center bg-repeat-x px-4  '>
             {JarData.map((card, index) => (
               <Jar key={index} image={card.image} title={card.title} />
             ))}
           </div>
         </div>
       </div>
-      <Grid container spacing={2} sx={{ justifyContent: 'center', alignItems: 'center',display:'flex',textAlign:'center',width:'100%', minHeight:'100vh',maxHeight:'auto',marginTop:{xs:'5%',lg:'1.5%'} }}>
+      <Grid container spacing={2} sx={{ justifyContent: 'center', alignItems: 'center',display:'flex',textAlign:'center',width:'100%', minHeight:'120vh',maxHeight:'auto',marginTop:'5%' }}>
         <Grid item xs={12} sm={6} md={4} lg={12} sx={{ textAlign: 'center' }}>
           <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', position: 'relative' }}>
 
@@ -176,17 +176,17 @@ export default function page() {
           </div>
         </div>
 
-        <div className='absolute bottom-0 left-0 right-0 translate-y-[50%] w-full'>
-          <div className='bg-cloud min-h-[45vh] bg-repeat-x'></div>
+        <div className='absolute bottom-0 left-0 right-0 translate-y-[40%] w-full'>
+          <div className='bg-cloud min-h-[45vh] bg-repeat-x bg-center'></div>
         </div>
       </div>
-      <Box sx={{display:'flex',justifyContent:'start',alignItems:'center',textAlign:'start',marginLeft:'3%', marginTop: '15vh'}}>
-        <Typography variant='h6' sx={{textAlign:'start',fontFamily:'cr',fontWeight:'bolder',fontStyle:'italic',color:'#C3A78E'}}>
+      <Box sx={{display:'flex',justifyContent:'start',alignItems:'center',textAlign:'center',marginLeft:'3%', marginTop: '15vh'}}>
+        <Typography variant='h6' sx={{textAlign:'center',fontFamily:'cr',fontWeight:'bolder',fontStyle:'italic',color:'#C3A78E'}}>
           Tasty tidbits for every environment
         </Typography>
       </Box>
-      <Box sx={{display:'flex',justifyContent:'start',alignItems:'center',textAlign:'start',marginLeft:'3%',marginBottom:'5%'}}>
-        <Typography variant='h1' sx={{textAlign:'start',fontFamily:'le',}}>Discover our product range</Typography>
+      <Box sx={{display:'flex',justifyContent:'start',alignItems:'center',textAlign:'center',marginLeft:'3%',marginBottom:'5%'}}>
+        <Typography variant='h1' sx={{textAlign:'center',fontFamily:'le',}}>Discover our product range</Typography>
       </Box>
       <Box data-aos="fade-up"
         data-aos-duration="3000" data-aos-offset="300" sx={{ width:'100%',display: 'flex', flexWrap: 'wrap', justifyContent: 'center', backgroundColor: '#faf7f3',minHeight:'100vh', maxHeight: 'auto',borderBottom:'2px solid #c3a88f'}} >
