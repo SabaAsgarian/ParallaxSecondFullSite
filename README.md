@@ -15,6 +15,7 @@
 
 
 - [Demo Project](https://parallaxsecondfullsite.vercel.app/)
+- [Demo Project With horizontal Scroll](https://darboparallax.vercel.app/)
 
 - Developed by Saba Asgarian
 
